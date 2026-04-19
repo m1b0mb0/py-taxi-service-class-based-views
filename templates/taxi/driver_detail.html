@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h3>Cars:</h3>
+  <h3>Driver: {{ driver.username }}</h3>
+  <h4>Cars:</h4>
   {% if driver.cars.all %}
     <ul>
       {% for car in driver.cars.all %}
@@ -9,6 +10,6 @@
       {% endfor %}
     </ul>
   {% else %}
-    <p>Driver has ho cars</p>
+    <p>Driver has no cars</p>
   {% endif %}
 {% endblock %}
